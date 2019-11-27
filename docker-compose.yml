@@ -1,0 +1,50 @@
+version: '3'
+             
+services:
+              
+  node-7000:
+    container_name: n70
+    build: data/node-7000
+    command: redis-server /etc/redis/redis.conf   
+    ports:
+      - "7000:7000" 
+                 
+  node-7001:
+    container_name: n71
+    build: data/node-7001
+    command: redis-server /etc/redis/redis.conf
+    ports:
+      - "7001:7001" 
+
+
+      
+  node-7002:
+    container_name: n72
+    build: data/node-7002
+    command: redis-server /etc/redis/redis.conf
+    ports:
+      - "7002:7002"  
+    #network_mode: host
+                                 
+  node-7003:
+    container_name: n73
+    build: data/node-7003
+    command: redis-server /etc/redis/redis.conf
+    ports:
+      - "7003:7003"  
+                        
+
+  node-7004:
+    container_name: n74
+    build: data/node-7004
+    command: redis-server /etc/redis/redis.conf
+    ports:
+      - "7004:7004"  
+
+                        
+  node-7005:
+    container_name: n75
+    build: data/node-7005
+    command: redis-server /etc/redis/redis.conf
+    ports:
+      - "7005:7005"  
